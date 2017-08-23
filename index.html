@@ -9,21 +9,108 @@
         <script>
             $(document).ready(function(){
 
+                $("#beach").hover(
+                    function(){
+                        $("#outter-box").css("background-image", "url(beach.jpg)");
+                    },function(){
+                        $("#outter-box").css("background-image", "url()");
+                    }
+                );
+
+                $("#planet").hover(
+                    function(){
+                        $("#outter-box").css("background-image", "url(earth.jpg)");
+                    },function(){
+                        $("#outter-box").css("background-image", "url()");
+                    }
+                );
+
+                $("#dojo").hover(
+                    function(){
+                        $("#outter-box").css("background-image", "url(dojo.jpg)");
+                    },function(){
+                        $("#outter-box").css("background-image", "url()");
+                    }
+                );
+
+                $("#forest").hover(
+                    function(){
+                        $("#outter-box").css("background-image", "url(forest.jpg)");
+                    },function(){
+                        $("#outter-box").css("background-image", "url()");
+                    }
+                );
+
+                $("#matrix").hover(
+                    function(){
+                        $("#outter-box").css("background-image", "url(matrix.jpg)");
+                    },function(){
+                        $("#outter-box").css("background-image", "url()");
+                    }
+                );
+
+                $("#snow").hover(
+                    function(){
+                        $("#outter-box").css("background-image", "url(snow.jpg)");
+                    },function(){
+                        $("#outter-box").css("background-image", "url()");
+                    }
+                );
+                
+                $(".arena-button").click(function(){
+                    $("#select-arena-box").html("<h2>Select Character</h2>");
+                    $("#select-arena-box").append("<select id='firstPlayer'><option value='donny'>Donny</option><option value='leo'>Leo</option><option value='mikey'>Mikey</option><option value='raphael'>Raphael</option></select>");
+                    $("#select-arena-box").append("<select id='secondPlayer'><option value='donny'>Donny</option><option value='leo'>Leo</option><option value='mikey'>Mikey</option><option value='raphael'>Raphael</option></select>");
+                })
+
+                $('#select-arena-box').on('click', function(){
+
+                if($("#firstPlayer").val()==="donny"){
+                    $('#playerOne').css('background-image', 'url(donny.png)');
+                }
+                if($("#firstPlayer").val()==="leo"){
+                    $('#playerOne').css('background-image', 'url(leo.png)');
+                }
+                if($("#firstPlayer").val()==="mikey"){
+                    $('#playerOne').css('background-image', 'url(mikey.png)');
+                }
+                if($("#firstPlayer").val()==="raphael"){
+                    $('#playerOne').css('background-image', 'url(raphael.png)');
+                }
+
+                if($("#secondPlayer").val()==="donny"){
+                    $('#playerTwo').css('background-image', 'url(donny.png)');
+                }
+                if($("#secondPlayer").val()==="leo"){
+                    $('#playerTwo').css('background-image', 'url(leo.png)');
+                }
+                if($("#secondPlayer").val()==="mikey"){
+                    $('#playerTwo').css('background-image', 'url(mikey.png)');
+                }
+                if($("#secondPlayer").val()==="raphael"){
+                    $('#playerTwo').css('background-image', 'url(raphael.png)');
+                }
+                })
+
             });
         </script>
-        <title>Document</title>
+        <title>Dojo Arena</title>
     </head>
     <body>
         <div id="outter-box">
             <div id="select-arena-box">
                 <h2>Select Arena</h2>
-                <button class="arena-button">beach</button>
-                <button class="arena-button">planet</button>
-                <button class="arena-button">dojo</button><br>
-                <button class="arena-button">forest</button>
-                <button class="arena-button">matrix</button>
-                <button class="arena-button">snow</button>
+                <button id="beach" class="arena-button">beach</button>
+                <button id="planet" class="arena-button">planet</button>
+                <button id="dojo" class="arena-button">dojo</button><br>
+                <button id="forest" class="arena-button">forest</button>
+                <button id="matrix" class="arena-button">matrix</button>
+                <button id="snow" class="arena-button">snow</button>
+            </div><br>
+            <div id="playerOne" class="players">
+
             </div>
+            <div id="playerTwo" class="players"></div>
         </div>
     </body>
 </html>

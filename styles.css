@@ -8,7 +8,7 @@ body{
     border: 4px solid gray;
     width: 970px;
     height: 680px;
-    background-image: url(beach.jpg);
+    background-image: url();
     background-size: cover;
 }
 #select-arena-box{
@@ -38,4 +38,29 @@ body{
 }
 img{
     background-size: cover;
+}
+ 
+select{
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    margin: 10px;
+}
+
+#playerOne{
+    background-image: url();
+    background-size: cover;
+}
+
+#playerTwo{
+    background-image: url();
+    background-size: cover;
+}
+
+.players{
+    width: 150px;
+    height: 250px;
+    /* background-color: wheat; */
+    display: inline-block;
+    margin: 13px 130px;
 }
